@@ -1,0 +1,17 @@
+{
+  "services/tuyamotd": {
+    "description": "Tuyamotd permissions",
+    "read": {
+      "api": [
+        "/tuyamotd/*",
+        "/tuyamotd_c/*"
+      ]
+    },
+    "write": {
+      "api": [
+        "/tuyamotd/*",
+        "/tuyamotd_c/*"
+      ]
+    }
+  }
+}
