@@ -3,6 +3,9 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=tuyamotd
 PKG_RELEASE:=1
 PKG_VERSION:=1.0.0
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=http://84.15.161.187/ervgas/tuyamotd.git
+PKG_SOURCE_VERSION:=ac81f1ee9aaf7325dbfed0ac3f2c94baa6d829a0
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -13,7 +16,7 @@ define Package/tuyamotd
 endef
 
 define Package/tuyamotd/description
-	This is application package that monitors device and sends data to tuya cloud.
+	This is a monitoring daemon that monitors the device and sends data to the cloud.
 endef
 
 define Package/tuyamotd/install
