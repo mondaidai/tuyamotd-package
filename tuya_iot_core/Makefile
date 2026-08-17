@@ -24,22 +24,7 @@ define Package/tuya_iot_core/description
 	This is tuya-iot-code-sdk library
 endef
 
-define Package/tuyamotd/conffiles
-/etc/config/tuyamotd
-endef
-
 define Build/Install
-	$(INSTALL_DIR) $(PKG_INSTALL_DIR)/usr/lib $(PKG_INSTALL_DIR)/usr/include
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(CMAKE_BINARY_SUBDIR)/lib/*.so $(PKG_INSTALL_DIR)/usr/lib/
-
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/include/cipher_wrapper.h $(PKG_INSTALL_DIR)/usr/include/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/include/tuya_config_defaults.h $(PKG_INSTALL_DIR)/usr/include/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/include/tuya_endpoint.h $(PKG_INSTALL_DIR)/usr/include/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/include/tuyalink_core.h $(PKG_INSTALL_DIR)/usr/include/
-	
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/utils/cJSON.h $(PKG_INSTALL_DIR)/usr/include/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/utils/tuya_error_code.h $(PKG_INSTALL_DIR)/usr/include/
-	$(INSTALL_DATA) $(PKG_BUILD_DIR)/interface/mqtt_client_interface.h $(PKG_INSTALL_DIR)/usr/include/
 
 endef
 
