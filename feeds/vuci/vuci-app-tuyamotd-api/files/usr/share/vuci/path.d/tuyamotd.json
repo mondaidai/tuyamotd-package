@@ -1,4 +1,3 @@
 [
-    { "/tuyamotd_c/{service_group}/{sid}": "services/tuyamotd_config" },
-    { "/tuyamotd/{service_group}/{sid}": "services/tuyamotd" }
+    { "/tuyamotd_c/{service_group}/{sid}": "services/tuyamotd_config" }
 ]

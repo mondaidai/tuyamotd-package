@@ -4,15 +4,15 @@ PKG_NAME:=tuyamotd
 PKG_RELEASE:=1
 PKG_VERSION:=1.0.0
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=http://84.15.161.187/ervgas/tuyamotd.git
-PKG_SOURCE_VERSION:=ac81f1ee9aaf7325dbfed0ac3f2c94baa6d829a0
+PKG_SOURCE_URL:=git@84.15.161.187:ervgas/tuyamotd.git
+PKG_SOURCE_VERSION:=1c38888efaf0506b778f92b8c53cea90ca5c58c7
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/tuyamotd
 	CATEGORY:=Base system
 	TITLE:=tuyamotd
-	DEPENDS:=+tuya_iot_core +cJSON +libubus +libubox +libblobmsg-json +libpthread +libuci +rpcd +lua +libubus-lua
+	DEPENDS:=+tuya_iot_core +cJSON +libubus +libubox +libblobmsg-json +libpthread +libuci
 endef
 
 define Package/tuyamotd/description
