@@ -40,43 +40,6 @@ local opt_keepalive = TuyamotdMqttSection:option("keepalive")
 		return self.dt:irange(val, 1, 3600)
 	end
 
-local opt_failure_timeout_sec = TuyamotdMqttSection:option("failure_timeout_sec", {
-	description = "Offline detection timeout (sec)."
-})
-	function opt_failure_timeout_sec:validate(val)
-		return self.dt:irange(val, 10, 10000)
-	end
-
-local opt_initial_retry_delay_sec = TuyamotdMqttSection:option("initial_retry_delay_sec", {
-	description = "Initial delay before reconnect after connection failure (seconds)"
-})
-	function opt_initial_retry_delay_sec:validate(val)
-		return self.dt:irange(val, 1, 3600)
-	end
-
-local opt_backoff_cap_sec = TuyamotdMqttSection:option("backoff_cap_sec", {
-	description = "Maximum reconnect delay (sec)."
-})
-	function opt_backoff_cap_sec:validate(val)
-		return self.dt:irange(val, 30, 10000)
-	end
-
-local TuyamotdTelemetrySection = TuyamotdAPI:section("tuyamotd", "telemetry")
-
-local opt_report_interval_ms = TuyamotdTelemetrySection:option("report_interval_ms", {
-	description = "Telemetry sending frequency (ms)"
-});
-	function opt_report_interval_ms:validate(val)
-		return self.dt:irange(val, 1000, 21600000)
-	end
-
-local opt_telemetry_interval_ms = TuyamotdTelemetrySection:option("telemetry_interval_ms", {
-	description = "Telemetry gathering frequency (ms)"
-})
-	function opt_telemetry_interval_ms:validate(val)
-		return self.dt:irange(val, 1000, 21600000)
-	end
-
 local TuyamotdSystemSection = TuyamotdAPI:section("tuyamotd", "system")
 
 local opt_ubus_timeout_ms = TuyamotdSystemSection:option("ubus_timeout_ms")
@@ -101,7 +64,5 @@ local opt_log_level = TuyamotdLogSection:option("log_level")
 		return allowed[val] and val
 	end
 
-local opt_file = TuyamotdLogSection:option("file")
-opt_file.maxlength = 256
 
 return TuyamotdAPI
