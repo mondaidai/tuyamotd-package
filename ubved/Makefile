@@ -5,7 +5,7 @@ PKG_NAME:=ubved
 PKG_RELEASE:=1
 PKG_VERSION:=1.0.0
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=git@84.15.161.187:ervgas/ubved.git
+PKG_SOURCE_URL:=git@github.com:mondaidai/ubved.git
 
 define Package/ubved
 	CATEGORY:=Utilities
