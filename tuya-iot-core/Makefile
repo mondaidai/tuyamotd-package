@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=tuya_iot_core
+PKG_NAME:=tuya-iot-core
 PKG_RELEASE:=1
 PKG_VERSION:=1.0.0
 PKG_SOURCE_PROTO:=git
@@ -15,12 +15,12 @@ PKG_INSTALL:=0
 CMAKE_OPTIONS += -DBUILD_SHARED_LIBS=ON
 CMAKE_BINARY_SUBDIR:=build
 
-define Package/tuya_iot_core
+define Package/tuya-iot-core
 	CATEGORY:=Libraries
 	TITLE:=libtuyacore
 endef
 
-define Package/tuya_iot_core/description
+define Package/tuya-iot-core/description
 	This is tuya-iot-code-sdk library
 endef
 
@@ -43,9 +43,9 @@ define Build/InstallDev
 
 endef
 
-define Package/tuya_iot_core/install
+define Package/tuya-iot-core/install
 	$(INSTALL_DIR) $(1)/usr/lib
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(CMAKE_BINARY_SUBDIR)/lib/*.so $(1)/usr/lib/
 endef
 
-$(eval $(call BuildPackage,tuya_iot_core))
+$(eval $(call BuildPackage,tuya-iot-core))
