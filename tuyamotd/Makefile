@@ -4,7 +4,7 @@ PKG_NAME:=tuyamotd
 PKG_RELEASE:=1
 PKG_VERSION:=1.0.0
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=git@github.com:mondaidai/tuyamotd.git
+PKG_SOURCE_URL:=https://github.com/mondaidai/tuyamotd.git
 PKG_SOURCE_BRANCH:=tuya-esp-daemon
 PKG_SOURCE_VERSION:=HEAD
 
